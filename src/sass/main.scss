@@ -1,0 +1,45 @@
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin:auto;
+    padding: 1rem;
+    // background-image: linear-gradient(to right, rgb(229, 233, 165) ,rgb(99, 229, 194));
+    .main-user {
+        border: 1px solid grey;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .main-logos {
+        display: flex;
+        gap: 1.6rem;
+        img{
+            border: 1px solid grey;
+            border-radius: 50%;
+            padding: 2px;
+        }
+    }
+    .main-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        button {
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            background-color: rgb(190, 19, 190);
+            color: white;
+            transition: all .8s;
+            &:hover{
+                cursor: pointer;
+                background-color: purple;
+            }
+        }
+    }
+
+}
