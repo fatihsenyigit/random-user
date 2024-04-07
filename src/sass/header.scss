@@ -1,11 +1,12 @@
 
+@import './variables';
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    background-image: linear-gradient(to right, rgb(223, 214, 114), rgb(198, 233, 233));
+    background-color: $first;
 }
 
 .header-logo {
@@ -24,7 +25,7 @@
     display: flex;
     list-style: none;
     gap: 1rem;
-    color: purple;
+    color: $fourth;
     font-weight: 600;
     li{
         transition: all .8s;
@@ -32,5 +33,6 @@
     li:hover {
         cursor: pointer;
         scale: 1.08;
+        color: $second;
     }
 }

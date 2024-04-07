@@ -1,45 +1,70 @@
+@import "./variables";
 
 .main {
+  background-color: $first;
+  padding: 1rem;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 1px $second;
+  width: fit-content;
+  .main-user {
+    border-radius: 50%;
+    padding: 5px;
+    img {
+      border-radius: 5rem;
+      outline: 2px solid $third;
+      outline-offset: 5px;
+    }
+    
+  }
+
+  .main-info{
+        color: $fourth;
+    }
+  .main-logos {
     display: flex;
     justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    img {
+      border-radius: 5rem;
+      outline: 2px solid $third;
+      outline-offset: 3px;
+      padding: 3px;
+      transition: all 0.5s;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+  }
+  .main-buttons {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    margin:auto;
-    padding: 1rem;
-    // background-image: linear-gradient(to right, rgb(229, 233, 165) ,rgb(99, 229, 194));
-    .main-user {
-        border: 1px solid grey;
-        border-radius: 50%;
-        padding: 10px;
-    }
-    .main-logos {
-        display: flex;
-        gap: 1.6rem;
-        img{
-            border: 1px solid grey;
-            border-radius: 50%;
-            padding: 2px;
-        }
-    }
-    .main-buttons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        button {
-            padding: 10px 15px;
-            border-radius: 10px;
-            font-weight: 600;
-            border: none;
-            background-color: rgb(190, 19, 190);
-            color: white;
-            transition: all .8s;
-            &:hover{
-                cursor: pointer;
-                background-color: purple;
-            }
-        }
-    }
+    gap: 2rem;
 
+    button {
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: none;
+      background-color: $third;
+      color: black;
+      transition: all 0.8s;
+      &:hover {
+        cursor: pointer;
+        background-color: $second;
+      }
+    }
+  }
 }
