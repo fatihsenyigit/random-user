@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 const Home = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [userInfoTable, setUserInfoTable] = useState([])
 
   const url = "https://randomuser.me/api/";
   const getUser = async () => {
@@ -24,6 +25,8 @@ const Home = () => {
   useEffect(() => {
     getUser();
   }, []);
+
+
   return (
     <div className="home-container">
       <Header></Header>
@@ -31,8 +34,16 @@ const Home = () => {
         <h1 className="loading">Loading....</h1>
       ) : (
         <>
-          <Main user={user} getUser={getUser}></Main>
-          <UserTable></UserTable>
+          <Main
+            user={user}
+            getUser={getUser}
+            userInfoTable={userInfoTable}
+            setUserInfoTable={setUserInfoTable}
+          ></Main>
+          <UserTable
+            userInfoTable={userInfoTable}
+            setUserInfoTable={setUserInfoTable}
+          ></UserTable>
         </>
       )}
 

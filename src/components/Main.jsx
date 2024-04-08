@@ -9,15 +9,30 @@ import logo7 from "../assets/woman.svg";
 import logo8 from "../assets/growing-up-woman.svg";
 import "../sass/main.scss";
 
-const Main = ({ user, getUser }) => {
+const Main = ({ user, getUser, userInfoTable, setUserInfoTable }) => {
   const [info, setInfo] = useState("");
+  const [newArray, setNewArray] = useState([]);
 
   useEffect(() => {
     personName();
   }, [user]);
 
-  const aaa = user;
-  console.log(aaa);
+  const addUser = () => {
+    const userObject = {
+      userName: `${user[0].name.first} ${user[0].name.last}`,
+      userMail: `${user[0].email}`,
+      userPhone: `${user[0].phone}`,
+      userAge: `${user[0].dob.age}`,
+    };
+
+    setNewArray([...newArray, user[0].phone]);
+    console.log(newArray);
+    if (!newArray.includes(user[0].phone)) {
+      setUserInfoTable([...userInfoTable, userObject]);
+    } else {
+      alert("this user already is added");
+    }
+  };
 
   const personName = () => {
     const names = Object.values(user[0]?.name);
@@ -122,7 +137,7 @@ const Main = ({ user, getUser }) => {
         </div>
         <div className="main-buttons">
           <button onClick={getUser}>NEW USER</button>
-          <button>ADD USER</button>
+          <button onClick={addUser}>ADD USER</button>
         </div>
       </div>
     </div>
