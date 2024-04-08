@@ -26,7 +26,6 @@ const Main = ({ user, getUser, userInfoTable, setUserInfoTable }) => {
     };
 
     setNewArray([...newArray, user[0].phone]);
-    console.log(newArray);
     if (!newArray.includes(user[0].phone)) {
       setUserInfoTable([...userInfoTable, userObject]);
     } else {
