@@ -12,7 +12,7 @@
   flex-direction: column;
   gap: 2rem;
   margin: auto;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px 1px $second;
   width: fit-content;
@@ -37,6 +37,7 @@
     flex-wrap: wrap;
     img {
       border-radius: 5rem;
+      width: 60px;
       outline: 2px solid $third;
       outline-offset: 3px;
       padding: 3px;

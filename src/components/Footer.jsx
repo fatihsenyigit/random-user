@@ -1,9 +1,12 @@
+
 import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className='footer'>
+      Fatih <span>©CopyRight</span>
+    </div>
+  );
 }
 
 export default Footer
