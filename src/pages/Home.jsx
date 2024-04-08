@@ -1,6 +1,7 @@
 import Main from "../components/Main";
 import Header from "../components/Header";
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import UserTable from "../components/UserTable";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -26,8 +27,15 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header></Header>
-      {loading ? <h1 className="loading">Loading....</h1> : <Main user={user} getUser={getUser}></Main>}
-      
+      {loading ? (
+        <h1 className="loading">Loading....</h1>
+      ) : (
+        <>
+          <Main user={user} getUser={getUser}></Main>
+          <UserTable></UserTable>
+        </>
+      )}
+
       <Footer></Footer>
     </div>
   );

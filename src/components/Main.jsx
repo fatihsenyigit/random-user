@@ -5,28 +5,23 @@ import logo3 from "../assets/growing-up-man.svg";
 import logo4 from "../assets/map.svg";
 import logo5 from "../assets/phone.svg";
 import logo6 from "../assets/padlock.svg";
-import logo7 from '../assets/woman.svg'
-import logo8 from '../assets/growing-up-woman.svg'
+import logo7 from "../assets/woman.svg";
+import logo8 from "../assets/growing-up-woman.svg";
 import "../sass/main.scss";
 
-
-const Main = ({user, getUser}) => {
-  
+const Main = ({ user, getUser }) => {
   const [info, setInfo] = useState("");
-  
 
   useEffect(() => {
-    personName()
-  }, [user])
-  
-
+    personName();
+  }, [user]);
 
   const aaa = user;
   console.log(aaa);
 
   const personName = () => {
-    const names = Object.values(user[0]?.name)
-    const fullName = names.join(' ')
+    const names = Object.values(user[0]?.name);
+    const fullName = names.join(" ");
     setInfo(
       <div style={{ textAlign: "center" }}>
         My name is: <br />
@@ -43,7 +38,7 @@ const Main = ({user, getUser}) => {
     );
   };
   const personAge = () => {
-    const age = Object.values(user[0]?.dob)
+    const age = Object.values(user[0]?.dob);
     setInfo(
       <div style={{ textAlign: "center" }}>
         My age is: <br />
@@ -52,7 +47,7 @@ const Main = ({user, getUser}) => {
     );
   };
   const personStreet = () => {
-    const street = Object.values(user[0]?.location.street)
+    const street = Object.values(user[0]?.location.street);
     setInfo(
       <div style={{ textAlign: "center" }}>
         My street is: <br />
@@ -69,7 +64,7 @@ const Main = ({user, getUser}) => {
     );
   };
   const personPassword = () => {
-    const password = Object.values(user[0].login)[2]
+    const password = Object.values(user[0].login)[2];
     setInfo(
       <h4 style={{ textAlign: "center" }}>
         My password is: <br />
@@ -77,7 +72,7 @@ const Main = ({user, getUser}) => {
       </h4>,
     );
   };
- 
+
   return (
     <div className="main">
       <div className="main-container">

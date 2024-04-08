@@ -1,0 +1,51 @@
+
+@import './variables';
+
+.tableContainer {
+  box-shadow: 0px 0px 10px 1px $second;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  width: fit-content;
+
+}
+
+.userTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+  min-width: 450px;
+  max-width: 850;
+}
+
+// .userTable tr:nth-child(even) {
+//   background-color: $first;
+// }
+// .userTable tr:nth-child(odd) {
+//   background-color: $first;
+// }
+
+.userTable tr:hover {
+  background-color: #ddd;
+}
+
+
+
+.userTable th {
+  padding: 1rem;
+  text-align: center;
+  background-color: $second;
+  color: black;
+border-radius: .6rem;
+border-right: 1px solid $first;
+}
+
+.userTable td {
+  padding: 1rem;
+  text-align: left;
+  background-color: $first;
+  color: $fourth;
+  border-bottom: 1px solid $fourth;
+}
